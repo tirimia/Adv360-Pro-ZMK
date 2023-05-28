@@ -24,7 +24,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
             bindings =
                 <&kp>,
                 <&kp>;
@@ -106,11 +106,11 @@
 
         symbols {
             bindings = <
-&trans  &trans          &trans     &trans             &trans         &trans           &trans                                                                        &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE           &trans                                                                        &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
-&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON           &trans              &trans  &trans  &trans  &trans  &trans     &trans         &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
-&trans  &trans          &trans     &trans             &trans         &trans           &trans              &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans          &trans     &trans             &trans                 &hm COMMA COMMA  &hm LEFT_SHIFT DOT  &trans                  &trans  &kp SLASH  &kp BACKSPACE                            &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans     &trans                                                             &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE     &trans                                                             &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
+&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON     &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans     &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans                 &kp COMMA  &kp DOT  &trans                  &trans  &kp SLASH  &kp BACKSPACE                            &trans             &trans           &trans  &trans  &trans
             >;
         };
     };
