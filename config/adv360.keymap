@@ -48,7 +48,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "balanced";
-            hold-trigger-on-release;
         };
         hold_mod_tap_kp: hold_mod_tap_kp {
             compatible = "zmk,behavior-hold-tap";
