@@ -23,8 +23,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings =
                 <&kp>,
@@ -47,8 +46,9 @@
                 <&sl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
             flavor = "balanced";
+            hold-trigger-on-release;
         };
         hold_mod_tap_kp: hold_mod_tap_kp {
             compatible = "zmk,behavior-hold-tap";
@@ -58,7 +58,7 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -67,11 +67,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL     &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                         &tog 1                                                                                                                                       &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-  &kp TAB      &kp Q   &kp W     &kp E      &kp R   &kp T               &kp SINGLE_QUOTE                                                                                                                           &kp RIGHT_BRACKET   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-  &kp ESC      &kp A   &kp S     &kp D      &kp F   &kp G                         &tog 2  &hold_mod_tap_kp LEFT_SHIFT CAPSLOCK  &kp LALT  &none  &none              &kp LALT                        &kp BACKSPACE   &kp LEFT_BRACKET   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-&kp LSHFT      &kp Z   &kp X     &kp C      &kp V   &kp B                          &none                                 &none     &to 2  &none  &none  &kp NON_US_BACKSLASH                                &none              &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-    &mo 2  &kp GRAVE  &trans  &kp LEFT  &kp RIGHT          &hold_mod_tap_kp LSHIFT SPACE                        &hm_tl LCTRL 4  &kp LGUI                            &kp RGUI  &hold_mod_tap_kp LEFT_COMMAND ENTER  &kp LA(BACKSPACE)          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
+&kp EQUAL       &kp N1          &kp N2          &kp N3            &kp N4  &kp N5            &tog 1                                                                                           &mo 3  &kp N6             &kp N7           &kp N8           &kp N9                       &kp N0  &kp MINUS
+  &kp TAB        &kp Q           &kp W           &kp E             &kp R   &kp T  &kp SINGLE_QUOTE                                                                               &kp RIGHT_BRACKET   &kp Y              &kp U            &kp I            &kp O                        &kp P   &kp BSLH
+  &kp ESC  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F   &kp G            &tog 2    &kp CAPSLOCK  &kp LALT  &none  &none              &kp LALT  &kp BACKSPACE   &kp LEFT_BRACKET   &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMICOLON    &kp SQT
+&kp LSHFT        &kp Z           &kp X           &kp C             &kp V   &kp B             &none           &none     &to 2  &none  &none  &kp NON_US_BACKSLASH          &none              &none   &kp N              &kp M        &kp COMMA          &kp DOT                     &kp FSLH  &kp RSHFT
+    &mo 2    &kp GRAVE          &trans        &kp LEFT         &kp RIGHT                 &kp SPACE  &hm_tl LCTRL 4  &kp LGUI                            &kp RGUI      &kp ENTER      &kp BACKSPACE                     &kp UP         &kp DOWN         &kp LBKT                     &kp RBKT      &mo 2
             >;
         };
 
@@ -107,11 +107,11 @@
 
         symbols {
             bindings = <
-&trans  &trans          &trans     &trans             &trans         &trans                        &trans                                                             &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE                        &trans                                                             &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
-&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON                        &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
-&trans  &trans          &trans     &trans             &trans         &trans                        &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans          &trans     &trans             &trans                 &hold_mod_tap_kp LSHFT COMMA  &kp DOT  &trans                  &trans  &kp SLASH  &kp BACKSPACE                            &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans           &trans                                                                        &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE           &trans                                                                        &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
+&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON           &trans              &trans  &trans  &trans  &trans  &trans     &trans         &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans           &trans              &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans                 &hm COMMA COMMA  &hm LEFT_SHIFT DOT  &trans                  &trans  &kp SLASH  &kp BACKSPACE                            &trans             &trans           &trans  &trans  &trans
             >;
         };
     };
