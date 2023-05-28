@@ -24,7 +24,7 @@
             label = "HM_LEFT";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
             bindings =
                 <&kp>,
                 <&kp>;
@@ -70,7 +70,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 37 48 49 50 51 52 53 54 55 57 68 69 70 71 72 73 74 35 36 37 53 54 55 56 57 73 74 75>;
         };
     };
@@ -80,11 +80,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL                   &kp N1               &kp N2               &kp N3                 &kp N4  &kp N5            &tog 1                                                                                           &mo 3  &kp N6                   &kp N7                 &kp N8                 &kp N9                             &kp N0  &kp MINUS
-  &kp TAB                    &kp Q                &kp W                &kp E                  &kp R   &kp T  &kp SINGLE_QUOTE                                                                               &kp RIGHT_BRACKET   &kp Y                    &kp U                  &kp I                  &kp O                              &kp P   &kp BSLH
-  &kp ESC  &hm_left LEFT_CONTROL A  &hm_left LEFT_ALT S  &hm_left LEFT_GUI D  &hm_left LEFT_SHIFT F   &kp G            &tog 2    &kp CAPSLOCK  &kp LALT  &none  &none              &kp LALT  &kp BACKSPACE   &kp LEFT_BRACKET   &kp H  &hm_right RIGHT_SHIFT J  &hm_right RIGHT_GUI K  &hm_right RIGHT_ALT L  &hm_right RIGHT_CONTROL SEMICOLON    &kp SQT
-&kp LSHFT                    &kp Z                &kp X                &kp C                  &kp V   &kp B             &none           &none     &to 2  &none  &none  &kp NON_US_BACKSLASH          &none              &none   &kp N                    &kp M              &kp COMMA                &kp DOT                           &kp FSLH  &kp RSHFT
-    &mo 2                &kp GRAVE               &trans             &kp LEFT              &kp RIGHT                 &kp SPACE  &hm_tl LCTRL 4  &kp LGUI                            &kp RGUI      &kp ENTER      &kp BACKSPACE                           &kp UP               &kp DOWN               &kp LBKT                           &kp RBKT      &mo 2
+&kp EQUAL                   &kp N1               &kp N2               &kp N3                 &kp N4  &kp N5            &tog 1                                                                                         &mo 3  &kp N6                   &kp N7                 &kp N8                 &kp N9                             &kp N0  &kp MINUS
+  &kp TAB                    &kp Q                &kp W                &kp E                  &kp R   &kp T  &kp SINGLE_QUOTE                                                                             &kp RIGHT_BRACKET   &kp Y                    &kp U                  &kp I                  &kp O                              &kp P   &kp BSLH
+  &kp ESC  &hm_left LEFT_CONTROL A  &hm_left LEFT_ALT S  &hm_left LEFT_GUI D  &hm_left LEFT_SHIFT F   &kp G            &tog 2  &kp CAPSLOCK  &kp LALT  &none  &none              &kp LALT  &kp BACKSPACE   &kp LEFT_BRACKET   &kp H  &hm_right RIGHT_SHIFT J  &hm_right RIGHT_GUI K  &hm_right RIGHT_ALT L  &hm_right RIGHT_CONTROL SEMICOLON    &kp SQT
+&kp LSHFT                    &kp Z                &kp X                &kp C                  &kp V   &kp B             &none         &none     &to 2  &none  &none  &kp NON_US_BACKSLASH          &none              &none   &kp N                    &kp M              &kp COMMA                &kp DOT                           &kp FSLH  &kp RSHFT
+    &mo 2                &kp GRAVE               &trans             &kp LEFT              &kp RIGHT                 &kp SPACE         &sl 4  &kp LGUI                            &kp RGUI      &kp ENTER      &kp BACKSPACE                           &kp UP               &kp DOWN               &kp LBKT                           &kp RBKT      &mo 2
             >;
         };
 
@@ -120,11 +120,11 @@
 
         symbols {
             bindings = <
-&trans  &trans          &trans     &trans             &trans         &trans     &trans                                                             &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE     &trans                                                             &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
-&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON     &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
-&trans  &trans          &trans     &trans             &trans         &trans     &trans   &trans  &trans  &trans  &trans  &trans     &trans         &trans     &trans                 &trans             &trans           &trans  &trans  &trans
-&trans  &trans          &trans     &trans             &trans                 &kp COMMA  &kp DOT  &trans                  &trans  &kp SLASH  &kp BACKSPACE                            &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans     &trans                                                                          &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans  &kp UNDERSCORE   &kp PLUS  &kp DOUBLE_QUOTES      &kp GRAVE     &trans                                                                          &trans  &kp TILDE  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &trans  &trans
+&trans  &trans       &kp MINUS  &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMICOLON     &trans   &trans  &trans  &trans  &trans  &kp LESS_THAN  &kp GREATER_THAN        &trans  &kp COLON   &kp LEFT_PARENTHESIS   &kp LEFT_BRACKET   &kp LEFT_BRACE  &trans  &trans
+&trans  &trans          &trans     &trans             &trans         &trans     &trans   &trans  &trans  &trans  &trans         &trans            &trans        &trans     &trans                 &trans             &trans           &trans  &trans  &trans
+&trans  &trans          &trans     &trans             &trans                 &kp COMMA  &kp DOT  &trans                         &trans         &kp SLASH  &kp QUESTION                            &trans             &trans           &trans  &trans  &trans
             >;
         };
     };
