@@ -19,15 +19,18 @@
     behaviors {
         #include "macros.dtsi"
 
-        hm: homerow_mods {
+        hm_left: hm_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HM_LEFT";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             bindings =
                 <&kp>,
                 <&kp>;
+
+            hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 46 47 58 59 60 61 62 63 64 65 66 67 76 77 78 79 80 81 82 83>;
+            hold-trigger-on-release;
         };
         sticky: sticky {
             compatible = "zmk,behavior-sticky-key";
@@ -59,6 +62,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
         };
+        hm_right: hm_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_RIGHT";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 37 48 49 50 51 52 53 54 55 57 68 69 70 71 72 73 74 35 36 37 53 54 55 56 57 73 74 75>;
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -66,11 +82,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL       &kp N1          &kp N2          &kp N3            &kp N4  &kp N5            &tog 1                                                                                           &mo 3  &kp N6             &kp N7           &kp N8           &kp N9                       &kp N0  &kp MINUS
-  &kp TAB        &kp Q           &kp W           &kp E             &kp R   &kp T  &kp SINGLE_QUOTE                                                                               &kp RIGHT_BRACKET   &kp Y              &kp U            &kp I            &kp O                        &kp P   &kp BSLH
-  &kp ESC  &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &hm LEFT_SHIFT F   &kp G            &tog 2    &kp CAPSLOCK  &kp LALT  &none  &none              &kp LALT  &kp BACKSPACE   &kp LEFT_BRACKET   &kp H  &hm RIGHT_SHIFT J  &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMICOLON    &kp SQT
-&kp LSHFT        &kp Z           &kp X           &kp C             &kp V   &kp B             &none           &none     &to 2  &none  &none  &kp NON_US_BACKSLASH          &none              &none   &kp N              &kp M        &kp COMMA          &kp DOT                     &kp FSLH  &kp RSHFT
-    &mo 2    &kp GRAVE          &trans        &kp LEFT         &kp RIGHT                 &kp SPACE  &hm_tl LCTRL 4  &kp LGUI                            &kp RGUI      &kp ENTER      &kp BACKSPACE                     &kp UP         &kp DOWN         &kp LBKT                     &kp RBKT      &mo 2
+&kp EQUAL                   &kp N1               &kp N2               &kp N3                 &kp N4  &kp N5            &tog 1                                                                                           &mo 3  &kp N6                   &kp N7                 &kp N8                 &kp N9                             &kp N0  &kp MINUS
+  &kp TAB                    &kp Q                &kp W                &kp E                  &kp R   &kp T  &kp SINGLE_QUOTE                                                                               &kp RIGHT_BRACKET   &kp Y                    &kp U                  &kp I                  &kp O                              &kp P   &kp BSLH
+  &kp ESC  &hm_left LEFT_CONTROL A  &hm_left LEFT_ALT S  &hm_left LEFT_GUI D  &hm_left LEFT_SHIFT F   &kp G            &tog 2    &kp CAPSLOCK  &kp LALT  &none  &none              &kp LALT  &kp BACKSPACE   &kp LEFT_BRACKET   &kp H  &hm_right RIGHT_SHIFT J  &hm_right RIGHT_GUI K  &hm_right RIGHT_ALT L  &hm_right RIGHT_CONTROL SEMICOLON    &kp SQT
+&kp LSHFT                    &kp Z                &kp X                &kp C                  &kp V   &kp B             &none           &none     &to 2  &none  &none  &kp NON_US_BACKSLASH          &none              &none   &kp N                    &kp M              &kp COMMA                &kp DOT                           &kp FSLH  &kp RSHFT
+    &mo 2                &kp GRAVE               &trans             &kp LEFT              &kp RIGHT                 &kp SPACE  &hm_tl LCTRL 4  &kp LGUI                            &kp RGUI      &kp ENTER      &kp BACKSPACE                           &kp UP               &kp DOWN               &kp LBKT                           &kp RBKT      &mo 2
             >;
         };
 
