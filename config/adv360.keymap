@@ -79,11 +79,11 @@
 
         layer_fn {
             bindings = <
-&kp F1  &kp F2              &kp F3              &kp F4               &kp F5           &kp F6  &tog 1                                                 &mo 3  &kp F7          &kp F8          &kp F9          &kp F10  &kp F11  &kp F12
-&trans  &trans              &trans    &kp LC(UP_ARROW)    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                                                 &none  &trans          &trans    &kp UP_ARROW           &trans   &trans   &trans
-&trans  &trans  &kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(RIGHT_ARROW)           &trans  &trans  &trans  &trans  &none  &none  &trans  &trans   &none  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &trans   &trans
-&trans  &trans              &trans              &trans               &trans           &trans   &none   &none   &to 0  &none  &none  &trans   &none   &none  &trans          &trans          &trans           &trans   &trans   &trans
-&trans  &trans              &trans              &trans               &trans                   &trans  &trans  &trans                &trans  &trans  &trans                  &trans          &trans           &trans   &trans   &trans
+&kp F1  &kp F2          &kp F3          &kp F4             &kp F5           &kp F6  &tog 1                                                 &mo 3  &kp F7          &kp F8          &kp F9          &kp F10  &kp F11  &kp F12
+&trans  &trans          &trans    &kp UP_ARROW  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                                                 &none  &trans          &trans    &kp UP_ARROW           &trans   &trans   &trans
+&trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW           &trans  &trans  &trans  &trans  &none  &none  &trans  &trans   &none  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &trans   &trans
+&trans  &trans          &trans          &trans             &trans           &trans   &none   &none   &to 0  &none  &none  &trans   &none   &none  &trans          &trans          &trans           &trans   &trans   &trans
+&trans  &trans          &trans          &trans             &trans                   &trans  &trans  &trans                &trans  &trans  &trans                  &trans          &trans           &trans   &trans   &trans
             >;
         };
 
