@@ -23,7 +23,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HM_LEFT";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
             bindings =
                 <&kp>,
@@ -39,7 +39,7 @@
                 <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 34 35 37 48 49 50 51 52 53 54 55 57 68 69 70 71 72 73 74 35 36 37 53 54 55 56 57 73 74 75>;
         };
