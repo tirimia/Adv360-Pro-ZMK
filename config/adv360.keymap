@@ -65,6 +65,21 @@
             bindings = <&kp RIGHT_ALT>;
             key-positions = <43 46>;
         };
+
+        combo_lctrl {
+            bindings = <&kp LCTRL>;
+            key-positions = <32 31>;
+        };
+
+        combo_lsuper {
+            bindings = <&kp LGUI>;
+            key-positions = <32 30>;
+        };
+
+        combo_lalt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <32 29>;
+        };
     };
 
     keymap {
@@ -72,11 +87,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                                                        &mo 3                          &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp SINGLE_QUOTE                                                                                                              &kp RIGHT_BRACKET              &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &not_eq               &kp CAPSLOCK  &kp LALT                 &none  &none  &kp LALT              &kp BACKSPACE                &kp LEFT_BRACKET               &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X   &kp C     &kp V      &kp B   &none                 &none         &to 2                    &none  &none  &kp NON_US_BACKSLASH  &none                        &none                          &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &trans  &kp LEFT  &kp RIGHT          &hm_left LCTRL SPACE  &sl 4         &hm_left LEFT_ALT ENTER                &kp TAB               &hm_right RIGHT_SHIFT ENTER  &hm_right RIGHT_GUI BACKSPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                                                               &mo 3              &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp SINGLE_QUOTE                                                                                                     &kp RIGHT_BRACKET  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &not_eq                    &kp CAPSLOCK  &kp LALT                 &none  &none  &kp LALT              &kp BACKSPACE  &kp LEFT_BRACKET   &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z      &kp X   &kp C     &kp V      &kp B   &none                      &none         &to 2                    &none  &none  &kp NON_US_BACKSLASH  &none          &none              &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &trans  &kp LEFT  &kp RIGHT          &hm_left LEFT_SHIFT SPACE  &sl 4         &hm_left LEFT_ALT ENTER                &kp TAB               &kp ENTER      &kp BACKSPACE              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
