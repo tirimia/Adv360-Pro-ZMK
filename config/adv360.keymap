@@ -25,16 +25,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "balanced";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         hm_right: hm_right {
             compatible = "zmk,behavior-hold-tap";
             label = "HM_RIGHT";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -48,6 +45,25 @@
             label = "NOT_EQ";
             #binding-cells = <0>;
             bindings = <&kp EXCLAMATION &kp EQUAL>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        R-CTRL {
+            bindings = <&kp RCTRL>;
+            key-positions = <43 44>;
+        };
+
+        R-SUPER {
+            bindings = <&kp RGUI>;
+            key-positions = <43 45>;
+        };
+
+        R-ALT {
+            bindings = <&kp RIGHT_ALT>;
+            key-positions = <43 46>;
         };
     };
 
