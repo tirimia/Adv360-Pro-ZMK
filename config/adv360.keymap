@@ -51,17 +51,17 @@
     combos {
         compatible = "zmk,combos";
 
-        R-CTRL {
+        combo_rctrl {
             bindings = <&kp RCTRL>;
             key-positions = <43 44>;
         };
 
-        R-SUPER {
+        combo_rsuper {
             bindings = <&kp RGUI>;
             key-positions = <43 45>;
         };
 
-        R-ALT {
+        combo_ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <43 46>;
         };
